@@ -1,0 +1,229 @@
+$var1: #88ABFF;
+$var2: #ffffff;
+$var3: #618cf8;
+$var4: #575757;
+$var5: #cccccc;
+$var6: #6D6D6D;
+$var7: #f5f5f5;
+$var8: #8b8989;
+$var9: #999999;
+$var10: #6A93F8;
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	background: $var1;
+}
+::selection {
+	color: $var2;
+	background: $var3;
+}
+.wrapper {
+	margin: 50px;
+	display: grid;
+	gap: 25px;
+	grid-template-columns: repeat(auto-fill, 265px);
+	li {
+		height: 250px;
+		list-style: none;
+		border-radius: 5px;
+		padding: 15px 20px 20px;
+		background: $var2;
+		box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+	}
+}
+.add-box, .icon, .bottom-content, .popup, header, .settings .menu li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.add-box {
+	cursor: pointer;
+	flex-direction: column;
+	justify-content: center;
+	.icon {
+		height: 78px;
+		width: 78px;
+		color: $var1;
+		font-size: 40px;
+		border-radius: 50%;
+		justify-content: center;
+		border: 2px dashed $var1;
+	}
+	p {
+		color: $var1;
+		font-weight: 500;
+		margin-top: 20px;
+	}
+}
+.note {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.details {
+		max-height: 165px;
+		overflow-y: auto;
+	}
+	p {
+		font-size: 22px;
+		font-weight: 500;
+	}
+	span {
+		display: block;
+		color: $var4;
+		font-size: 16px;
+		margin-top: 5px;
+	}
+	.bottom-content {
+		padding-top: 10px;
+		border-top: 1px solid $var5;
+	}
+}
+.bottom-content span {
+	color: $var6;
+	font-size: 14px;
+}
+.bottom-content .settings {
+	position: relative;
+	i {
+		color: $var6;
+		cursor: pointer;
+		font-size: 15px;
+	}
+	i {
+		font-size: 17px;
+	}
+}
+.settings .menu {
+	z-index: 1;
+	bottom: 0;
+	right: -5px;
+	padding: 5px 0;
+	background: $var2;
+	position: absolute;
+	border-radius: 4px;
+	transform: scale(0);
+	transform-origin: bottom right;
+	box-shadow: 0 0 6px rgba(0,0,0,0.15);
+	transition: transform 0.2s ease;
+	li {
+		height: 25px;
+		font-size: 16px;
+		margin-bottom: 2px;
+		padding: 17px 15px;
+		cursor: pointer;
+		box-shadow: none;
+		border-radius: 0;
+		justify-content: flex-start;
+	}
+}
+.settings.show .menu {
+	transform: scale(1);
+}
+.menu li:last-child {
+	margin-bottom: 0;
+}
+.menu li:hover {
+	background: $var7;
+}
+.menu li i {
+	padding-right: 8px;
+}
+.popup-box {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.4);
+	.popup {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 3;
+		width: 100%;
+		max-width: 400px;
+		justify-content: center;
+		transform: translate(-50%, -50%) scale(0.95);
+	}
+	&.show, &.show .popup {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	&.show .popup {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	.popup {
+		max-width: calc(100% - 15px);
+	}
+}
+.popup-box, .popup {
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.25s ease;
+}
+.popup .content {
+	border-radius: 5px;
+	background: $var2;
+	width: calc(100% - 15px);
+	box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.content header {
+	padding: 15px 25px;
+	border-bottom: 1px solid $var5;
+	p {
+		font-size: 20px;
+		font-weight: 500;
+	}
+	i {
+		color: $var8;
+		cursor: pointer;
+		font-size: 23px;
+	}
+}
+.content form {
+	margin: 15px 25px 35px;
+	.row {
+		margin-bottom: 20px;
+	}
+}
+form .row label {
+	font-size: 18px;
+	display: block;
+	margin-bottom: 6px;
+}
+form :where(input, textarea) {
+	height: 50px;
+	width: 100%;
+	outline: none;
+	font-size: 17px;
+	padding: 0 15px;
+	border-radius: 4px;
+	border: 1px solid $var9;
+}
+form :where(input, textarea):focus {
+	box-shadow: 0 2px 4px rgba(0,0,0,0.11);
+}
+form .row textarea {
+	height: 150px;
+	resize: none;
+	padding: 8px 15px;
+}
+form button {
+	width: 100%;
+	height: 50px;
+	color: $var2;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-size: 17px;
+	border-radius: 4px;
+	background: $var10;
+}
+
