@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1076/1076928.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Анкета для хозяев котиков</h1>
+        <h3>(хотя...кто кому здесь хозяин?)</h3>
+        <img src="./assets/cat.jpg" alt="cat">
+
+        <form>
+
+            <p><label for="name">Имя Фамилия Отчество владельца</label>
+                <input type="text" id="cust-name" placeholder="Введите Ваше имя" required></p>
+
+            <p><label for="mail">Почта владельца</label>
+                <input type="email" id="cust-mail" placeholder="meow@gmail.com" required></p>
+
+            <p><label for="telephone">Номер телефона владельца</label>
+                <input type="tel"id="cust-tel" placeholder=7111111111 required></p>
+
+            <p><label for="pet-name">Кличка питомца</label>
+                <input type="text" id="catsname" placeholder="Введите имя котика" required></p>
+
+                <p><label for="brige">Порода питомца</label>
+            <select>
+                <option value="first option">британская коротошорстная</option>
+                <option value="second option">русская голубая</option>
+                <option value="third option">персидская</option>
+                <option value="third option">канадский сфинкс</option>
+                <option value="third option">дворяночка</option>
+                <option value="third option">сиамская</option>
+                <option value="third option">шотландская вислоухая</option>
+            </select>
+
+
+            <p><label for="meal">Что больше всего любит Ваш питомец?</label>
+            <p><input type="checkbox" name="a" value="сухой корм"> сухой корм</p>
+            <p><input type="checkbox" name="a" value="куриное мясо"> куриное мясо</p>
+            <p><input type="checkbox" name="a" value="овощи"> овощи</p>
+            <p><input type="checkbox" name="a" value="рыба"> рыба</p>
+            <p><input type="checkbox" name="a" value="молочные продукты"> молочные продукты</p>
+
+            <p><label for="sex">Укажите пол Вашего котика</label>
+            <input type="radio" name="sex" value="m" /><span>Самец </span><input type="radio" name="sex"
+                value="f" /><span>Самка</span>
+
+            <p><label for="age">Сколько лет Вашему пушистику?</label>
+            <input type="number" max=18 min=1 placeholder="" required></p>
+
+            <p><label for="comment">Комментарий</label>
+            <textarea>Расскажите подробнее о Вашем питомце</textarea></p>
+
+           
+           <label for="photo">Прикрепите фото питомца</label>
+            <input type="file" name="photo" multiple accept="image/*,image/jpeg" required>
+
+                <div class="btn" id="send-button"><button>Отправить</button></div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

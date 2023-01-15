@@ -1,0 +1,26 @@
+.container {
+   padding-left: 30px;
+    font-size: 18px;
+}
+img {
+    width: 400px;
+    height: 400px;
+}
+p {
+   font-weight: 900;
+}
+ div #send-button {
+    padding-top: 10px;
+    button {
+        background-color: blue;
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 20px;
+        color: aliceblue;
+    }
+ }
+
+ input:valid {
+background-color: greenyellow;
+ }
